@@ -1,0 +1,132 @@
+import { type ComponentType } from "react";
+
+/* ── Phosphor Icons (primary set — clean & modern) ── */
+import {
+  PiBusBold,
+  PiGridFourBold,
+  PiLightningBold,
+  PiUsersBold,
+  PiCurrencyDollarBold,
+  PiArrowRightBold,
+  PiArrowLeftBold,
+  PiCheckBold,
+  PiCheckCircleBold,
+  PiBellBold,
+  PiMapPinBold,
+  PiChatCircleBold,
+  PiCreditCardBold,
+  PiClipboardTextBold,
+  PiDeviceMobileBold,
+  PiHeartBold,
+  PiBuildingsBold,
+  PiSmileyStickerBold,
+  PiBookOpenBold,
+  PiLockSimpleBold,
+  PiMegaphoneBold,
+  PiHouseBold,
+  PiChartBarBold,
+  PiFileBold,
+  PiEyeBold,
+  PiUserCheckBold,
+  PiStethoscopeBold,
+  PiBedBold,
+  PiForkKnifeBold,
+  PiNavigationArrowBold,
+  PiSparkleBold,
+  PiStarBold,
+  PiCaretRightBold,
+  PiCaretDownBold,
+  PiScalesBold,
+  PiCompassToolBold,
+  PiSailboatBold,
+  PiTextBBold,
+  PiBookmarkSimpleBold,
+  PiPackageBold,
+  PiBriefcaseBold,
+  PiCalendarBold,
+  PiClipboardBold,
+  PiWarningBold,
+  PiGiftBold,
+  PiQuestionBold,
+  PiSpinnerBold,
+  PiPaperPlaneRightBold,
+  PiClockClockwiseBold,
+  PiClockBold,
+  PiLockSimpleOpenBold,
+  PiUserPlusBold,
+  PiArrowUpBold,
+} from "react-icons/pi";
+
+const iconMap: Record<string, ComponentType<{ size?: number; className?: string }>> = {
+  "bus":               PiBusBold,
+  "apps":              PiGridFourBold,
+  "bolt":              PiLightningBold,
+  "users":             PiUsersBold,
+  "dollar":            PiCurrencyDollarBold,
+  "arrow-right":       PiArrowRightBold,
+  "arrow-left":        PiArrowLeftBold,
+  "arrow-up":          PiArrowUpBold,
+  "check":             PiCheckBold,
+  "check-circle":      PiCheckCircleBold,
+  "bell":              PiBellBold,
+  "map-marker":        PiMapPinBold,
+  "comment":           PiChatCircleBold,
+  "credit-card":       PiCreditCardBold,
+  "clipboard-list":    PiClipboardTextBold,
+  "smartphone":        PiDeviceMobileBold,
+  "heart":             PiHeartBold,
+  "building":          PiBuildingsBold,
+  "smile":             PiSmileyStickerBold,
+  "book-open-cover":   PiBookOpenBold,
+  "lock":              PiLockSimpleBold,
+  "megaphone":         PiMegaphoneBold,
+  "home":              PiHouseBold,
+  "chart-histogram":   PiChartBarBold,
+  "document":          PiFileBold,
+  "eye":               PiEyeBold,
+  "user-check":        PiUserCheckBold,
+  "stethoscope":       PiStethoscopeBold,
+  "bed":               PiBedBold,
+  "utensils":          PiForkKnifeBold,
+  "navigation":        PiNavigationArrowBold,
+  "sparkles":          PiSparkleBold,
+  "star":              PiStarBold,
+  "angle-right":       PiCaretRightBold,
+  "angle-small-down":  PiCaretDownBold,
+  "balance-scale-right": PiScalesBold,
+  "blueprint":         PiCompassToolBold,
+  "boat":              PiSailboatBold,
+  "bold":              PiTextBBold,
+  "bookmark":          PiBookmarkSimpleBold,
+  "box-open":          PiPackageBold,
+  "briefcase":         PiBriefcaseBold,
+  "calendar":          PiCalendarBold,
+  "clipboard-check":   PiClipboardBold,
+  "exclamation":       PiWarningBold,
+  "gift":              PiGiftBold,
+  "interrogation":     PiQuestionBold,
+  "loading":           PiSpinnerBold,
+  "paper-plane":       PiPaperPlaneRightBold,
+  "time-forward":      PiClockClockwiseBold,
+  "time-oclock":       PiClockBold,
+  "triangle-warning":  PiWarningBold,
+  "unlock":            PiLockSimpleOpenBold,
+  "user-add":          PiUserPlusBold,
+};
+
+interface FlatIconProps {
+  name: string;
+  size?: number;
+  className?: string;
+}
+
+export default function FlatIcon({ name, size = 16, className = "" }: FlatIconProps) {
+  const Icon = iconMap[name];
+  if (!Icon) {
+    if (process.env.NODE_ENV === "development") {
+      console.warn(`[FlatIcon] Unknown icon name: "${name}"`);
+    }
+    return <span style={{ width: size, height: size }} />;
+  }
+  return <Icon size={size} className={className} />;
+}
