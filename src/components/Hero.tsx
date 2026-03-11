@@ -1,4 +1,5 @@
 import Image from "next/image";
+import heroImg from "../../public/image.png";
 import AppStoreBadges from "./AppStoreBadges";
 import FlatIcon from "@/components/FlatIcon";
 
@@ -143,7 +144,7 @@ export default function Hero() {
               </div>
             </div>
             <Image
-              src="/image.png"
+              src={heroImg}
               alt="School Bus admin dashboard"
               width={1280}
               height={800}
