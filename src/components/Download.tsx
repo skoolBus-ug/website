@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AppStoreBadges from "./AppStoreBadges";
 import FlatIcon from "@/components/FlatIcon";
 import ScrollReveal from "./ScrollReveal";
@@ -19,10 +20,11 @@ export default function Download() {
       <div className="relative">
         {/* Background image - full bleed */}
         <div className="absolute inset-0">
-          <img
+          <Image
             src="/image2.png"
             alt="School Bus app interface"
-            className="w-full h-full object-cover object-top"
+            fill
+            className="object-cover object-top"
           />
           <div className="absolute inset-0 bg-linear-to-r from-gray-950 via-gray-950/85 to-gray-950/40" />
           <div className="absolute inset-0 bg-linear-to-t from-gray-950 via-transparent to-gray-950/60" />

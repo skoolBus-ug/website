@@ -1,3 +1,4 @@
+import Link from "next/link";
 import AppStoreBadges from "./AppStoreBadges";
 import FlatIcon from "@/components/FlatIcon";
 
@@ -66,8 +67,8 @@ export default function Footer() {
         <div className="border-t border-white/8 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500 font-semibold">
           <p>© {new Date().getFullYear()} School Bus. All rights reserved. Made in Uganda.</p>
           <div className="flex gap-6">
-            <a href="/privacy-policy" className="hover:text-orange-400 transition-colors">Privacy Policy</a>
-            <a href="/terms-of-service" className="hover:text-orange-400 transition-colors">Terms of Service</a>
+            <Link href="/privacy-policy" className="hover:text-orange-400 transition-colors">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="hover:text-orange-400 transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
