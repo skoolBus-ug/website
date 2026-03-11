@@ -15,12 +15,15 @@ const roles = [
     border: "border-orange-100",
     ctaBg: "bg-linear-to-r from-orange-500 to-amber-400",
     points: [
-      { icon: "bus",            text: "Track the school bus live on a map" },
-      { icon: "bell",           text: "Alerts when the bus is 2 stops away" },
-      { icon: "check-circle",   text: "Confirmed when your child boards & alights" },
-      { icon: "credit-card",    text: "Pay fees and view balance anytime" },
+      { icon: "bus", text: "Track the school bus live on a map" },
+      { icon: "bell", text: "Alerts when the bus is 2 stops away" },
+      {
+        icon: "check-circle",
+        text: "Confirmed when your child boards & arrives",
+      },
+      { icon: "credit-card", text: "Pay fees and view balance anytime" },
       { icon: "clipboard-list", text: "Attendance and academic report cards" },
-      { icon: "lock",           text: "Authorise trusted pickup persons" },
+      { icon: "lock", text: "Authorise trusted pickup persons" },
     ],
   },
   {
@@ -36,12 +39,18 @@ const roles = [
     border: "border-blue-100",
     ctaBg: "bg-linear-to-r from-blue-600 to-indigo-600",
     points: [
-      { icon: "chart-histogram", text: "Live overview of all 19 modules in one place" },
-      { icon: "bus",             text: "Monitor entire bus fleet in real time" },
-      { icon: "document",        text: "Fees, attendance & payroll reports on demand" },
-      { icon: "users",           text: "Manage students, staff, routes & dorm rooms" },
-      { icon: "megaphone",       text: "Send announcements to any group instantly" },
-      { icon: "eye",             text: "Visitor log and gate access control" },
+      {
+        icon: "chart-histogram",
+        text: "Live overview of all 19 modules in one place",
+      },
+      { icon: "bus", text: "Monitor entire bus fleet in real time" },
+      {
+        icon: "document",
+        text: "Fees, attendance & payroll reports on demand",
+      },
+      { icon: "users", text: "Manage students, staff, routes & dorm rooms" },
+      { icon: "megaphone", text: "Send announcements to any group instantly" },
+      { icon: "eye", text: "Visitor log and gate access control" },
     ],
   },
   {
@@ -57,28 +66,50 @@ const roles = [
     border: "border-green-100",
     ctaBg: "bg-linear-to-r from-green-600 to-emerald-500",
     points: [
-      { icon: "bus",            text: "Drivers: start trips and mark boarding with one tap" },
-      { icon: "stethoscope",    text: "Nurses: log consultations and medication records" },
-      { icon: "book-open-cover", text: "Teachers: enter marks and manage timetables" },
-      { icon: "bed",            text: "Dorm masters: nightly attendance in under 5 min" },
-      { icon: "utensils",       text: "Canteen staff: track daily meals and stock levels" },
-      { icon: "lock",           text: "Gate guards: log every visitor and pickup" },
+      {
+        icon: "bus",
+        text: "Drivers: start trips and mark boarding with one tap",
+      },
+      {
+        icon: "stethoscope",
+        text: "Nurses: log consultations and medication records",
+      },
+      {
+        icon: "book-open-cover",
+        text: "Teachers: enter marks and manage timetables",
+      },
+      { icon: "bed", text: "Dorm masters: nightly attendance in under 5 min" },
+      {
+        icon: "utensils",
+        text: "Canteen staff: track daily meals and stock levels",
+      },
+      { icon: "lock", text: "Gate guards: log every visitor and pickup" },
     ],
   },
 ];
 
 const roleChips = [
-  "Parents", "School Administrators", "Bus Drivers", "Teachers",
-  "School Nurses", "Librarians", "Dorm Masters", "Canteen Staff", "Gate Guards", "Bursars",
+  "Parents",
+  "School Administrators",
+  "Bus Drivers",
+  "Teachers",
+  "School Nurses",
+  "Librarians",
+  "Dorm Masters",
+  "Canteen Staff",
+  "Gate Guards",
+  "Bursars",
 ];
 
 export default function ForSchools() {
   return (
-    <section id="for-schools" className="py-24 bg-white relative overflow-hidden">
+    <section
+      id="for-schools"
+      className="py-24 bg-white relative overflow-hidden"
+    >
       <div className="absolute inset-0 bg-grid opacity-[0.04] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-6 sm:px-10">
-
         {/* Header */}
         <ScrollReveal>
           <div className="text-center mb-14">
@@ -86,16 +117,24 @@ export default function ForSchools() {
               <FlatIcon name="users" size={14} /> Built for Every Role
             </div>
             <h2 className="text-4xl sm:text-5xl font-black text-gray-900 leading-tight mb-4">
-              One platform, <span className="bg-yellow-400 text-gray-900 px-2 rounded-lg">every person</span> in your school
+              One platform,{" "}
+              <span className="bg-yellow-400 text-gray-900 px-2 rounded-lg">
+                every person
+              </span>{" "}
+              in your school
             </h2>
             <p className="text-gray-500 text-lg font-semibold max-w-2xl mx-auto mb-8">
-              From the school gate to the dormitory — every role gets dedicated tools built exactly for their job.
+              From the school gate to the dormitory — every role gets dedicated
+              tools built exactly for their job.
             </p>
 
             {/* Role chips */}
             <div className="flex flex-wrap justify-center gap-2">
               {roleChips.map((r) => (
-                <span key={r} className="text-xs font-bold text-gray-500 bg-gray-50 border border-gray-200 px-3.5 py-1.5 rounded-full">
+                <span
+                  key={r}
+                  className="text-xs font-bold text-gray-500 bg-gray-50 border border-gray-200 px-3.5 py-1.5 rounded-full"
+                >
                   {r}
                 </span>
               ))}
@@ -107,19 +146,32 @@ export default function ForSchools() {
         <div className="grid md:grid-cols-3 gap-6">
           {roles.map((role, i) => (
             <ScrollReveal key={role.id} delay={i * 150}>
-              <div className={`bg-white border-2 ${role.border} rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 h-full`}>
-
+              <div
+                className={`bg-white border-2 ${role.border} rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 h-full`}
+              >
                 {/* Gradient header */}
-                <div className={`bg-linear-to-br ${role.headerGrad} px-7 pt-7 pb-6 border-b ${role.border} relative`}>
+                <div
+                  className={`bg-linear-to-br ${role.headerGrad} px-7 pt-7 pb-6 border-b ${role.border} relative`}
+                >
                   {/* Large background icon */}
                   <div className="absolute -right-4 -bottom-4 opacity-[0.07]">
-                    <FlatIcon name={role.labelIcon} size={120} className={role.iconColor} />
+                    <FlatIcon
+                      name={role.labelIcon}
+                      size={120}
+                      className={role.iconColor}
+                    />
                   </div>
-                  <div className={`inline-flex items-center gap-2 ${role.iconBg} ${role.iconColor} text-xs font-black uppercase tracking-widest px-3 py-1.5 rounded-full mb-4`}>
+                  <div
+                    className={`inline-flex items-center gap-2 ${role.iconBg} ${role.iconColor} text-xs font-black uppercase tracking-widest px-3 py-1.5 rounded-full mb-4`}
+                  >
                     <FlatIcon name={role.labelIcon} size={12} /> {role.label}
                   </div>
-                  <h3 className="text-gray-900 font-black text-xl leading-tight mb-2">{role.headline}</h3>
-                  <p className="text-gray-500 text-sm font-semibold leading-relaxed">{role.desc}</p>
+                  <h3 className="text-gray-900 font-black text-xl leading-tight mb-2">
+                    {role.headline}
+                  </h3>
+                  <p className="text-gray-500 text-sm font-semibold leading-relaxed">
+                    {role.desc}
+                  </p>
                 </div>
 
                 {/* Feature list */}
@@ -127,10 +179,18 @@ export default function ForSchools() {
                   <ul className="space-y-3 mb-7">
                     {role.points.map((pt) => (
                       <li key={pt.text} className="flex items-start gap-3">
-                        <div className={`w-6 h-6 ${role.iconBg} rounded-lg flex items-center justify-center shrink-0 mt-0.5`}>
-                          <FlatIcon name={pt.icon} size={13} className={role.iconColor} />
+                        <div
+                          className={`w-6 h-6 ${role.iconBg} rounded-lg flex items-center justify-center shrink-0 mt-0.5`}
+                        >
+                          <FlatIcon
+                            name={pt.icon}
+                            size={13}
+                            className={role.iconColor}
+                          />
                         </div>
-                        <span className="text-gray-600 text-sm font-semibold leading-snug">{pt.text}</span>
+                        <span className="text-gray-600 text-sm font-semibold leading-snug">
+                          {pt.text}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -145,7 +205,6 @@ export default function ForSchools() {
             </ScrollReveal>
           ))}
         </div>
-
       </div>
     </section>
   );
