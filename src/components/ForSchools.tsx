@@ -8,12 +8,12 @@ const roles = [
     labelIcon: "users",
     headline: "Peace of mind, every school day",
     desc: "Know exactly where your child is — from the moment they board the bus to when they're safely in class.",
-    grad: "from-orange-500 to-amber-400",
-    headerGrad: "from-orange-500/15 to-amber-400/5",
-    iconColor: "text-orange-500",
-    iconBg: "bg-orange-50",
-    border: "border-orange-100",
-    ctaBg: "bg-linear-to-r from-orange-500 to-amber-400",
+    grad: "from-amber-500 to-orange-400",
+    headerGrad: "from-amber-500/15 to-orange-400/5",
+    iconColor: "text-amber-600",
+    iconBg: "bg-amber-50",
+    border: "border-amber-200",
+    ctaBg: "bg-linear-to-r from-amber-500 to-orange-400",
     points: [
       { icon: "bus", text: "Track the school bus live on a map" },
       { icon: "bell", text: "Alerts when the bus is 2 stops away" },
@@ -32,12 +32,12 @@ const roles = [
     labelIcon: "building",
     headline: "Total visibility, zero blind spots",
     desc: "One dashboard to oversee every corner of your school — buses, fees, staff, students and more.",
-    grad: "from-blue-600 to-indigo-600",
-    headerGrad: "from-blue-600/15 to-indigo-600/5",
-    iconColor: "text-blue-600",
-    iconBg: "bg-blue-50",
-    border: "border-blue-100",
-    ctaBg: "bg-linear-to-r from-blue-600 to-indigo-600",
+    grad: "from-emerald-600 to-teal-600",
+    headerGrad: "from-emerald-600/15 to-teal-600/5",
+    iconColor: "text-emerald-600",
+    iconBg: "bg-emerald-50",
+    border: "border-emerald-200",
+    ctaBg: "bg-linear-to-r from-emerald-600 to-teal-600",
     points: [
       {
         icon: "chart-histogram",
@@ -59,12 +59,12 @@ const roles = [
     labelIcon: "user-check",
     headline: "Role-specific tools, zero confusion",
     desc: "Every staff member sees only what they need — purpose-built for their exact job.",
-    grad: "from-green-600 to-emerald-500",
-    headerGrad: "from-green-600/15 to-emerald-500/5",
-    iconColor: "text-green-600",
-    iconBg: "bg-green-50",
-    border: "border-green-100",
-    ctaBg: "bg-linear-to-r from-green-600 to-emerald-500",
+    grad: "from-teal-600 to-cyan-500",
+    headerGrad: "from-teal-600/15 to-cyan-500/5",
+    iconColor: "text-teal-600",
+    iconBg: "bg-teal-50",
+    border: "border-teal-200",
+    ctaBg: "bg-linear-to-r from-teal-600 to-cyan-500",
     points: [
       {
         icon: "bus",
@@ -107,23 +107,23 @@ export default function ForSchools() {
       id="for-schools"
       className="py-24 bg-white relative overflow-hidden"
     >
-      <div className="absolute inset-0 bg-grid opacity-[0.04] pointer-events-none" />
+      <div className="absolute inset-0 bg-dots opacity-[0.03] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-6 sm:px-10">
         {/* Header */}
         <ScrollReveal>
           <div className="text-center mb-14">
-            <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 font-black text-xs uppercase tracking-widest px-5 py-2.5 rounded-full mb-6 border border-blue-200">
+            <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 font-black text-xs uppercase tracking-widest px-5 py-2.5 rounded-full mb-6 border border-emerald-200">
               <FlatIcon name="users" size={14} /> Built for Every Role
             </div>
-            <h2 className="text-4xl sm:text-5xl font-black text-gray-900 leading-tight mb-4">
+            <h2 className="text-4xl sm:text-5xl font-black text-stone-900 leading-tight mb-4">
               One platform,{" "}
-              <span className="bg-yellow-400 text-gray-900 px-2 rounded-lg">
+              <span className="bg-amber-400 text-stone-900 px-2 rounded-lg">
                 every person
               </span>{" "}
               in your school
             </h2>
-            <p className="text-gray-500 text-lg font-semibold max-w-2xl mx-auto mb-8">
+            <p className="text-stone-500 text-lg font-semibold max-w-2xl mx-auto mb-8">
               From the school gate to the dormitory — every role gets dedicated
               tools built exactly for their job.
             </p>
@@ -133,7 +133,7 @@ export default function ForSchools() {
               {roleChips.map((r) => (
                 <span
                   key={r}
-                  className="text-xs font-bold text-gray-500 bg-gray-50 border border-gray-200 px-3.5 py-1.5 rounded-full"
+                  className="text-xs font-bold text-stone-500 bg-stone-50 border border-stone-200 px-3.5 py-1.5 rounded-full"
                 >
                   {r}
                 </span>
@@ -166,10 +166,10 @@ export default function ForSchools() {
                   >
                     <FlatIcon name={role.labelIcon} size={12} /> {role.label}
                   </div>
-                  <h3 className="text-gray-900 font-black text-xl leading-tight mb-2">
+                  <h3 className="text-stone-900 font-black text-xl leading-tight mb-2">
                     {role.headline}
                   </h3>
-                  <p className="text-gray-500 text-sm font-semibold leading-relaxed">
+                  <p className="text-stone-500 text-sm font-semibold leading-relaxed">
                     {role.desc}
                   </p>
                 </div>
@@ -188,7 +188,7 @@ export default function ForSchools() {
                             className={role.iconColor}
                           />
                         </div>
-                        <span className="text-gray-600 text-sm font-semibold leading-snug">
+                        <span className="text-stone-600 text-sm font-semibold leading-snug">
                           {pt.text}
                         </span>
                       </li>

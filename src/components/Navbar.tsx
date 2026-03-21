@@ -23,7 +23,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/98 backdrop-blur-xl shadow-xl shadow-blue-100/40 border-b border-gray-100"
+          ? "bg-white/98 backdrop-blur-xl shadow-xl shadow-emerald-100/40 border-b border-stone-100"
           : "bg-transparent"
       }`}
     >
@@ -31,11 +31,11 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
           <span
-            className={`font-black text-xl tracking-tight ${scrolled ? "text-gray-900" : "text-white"}`}
+            className={`font-black text-xl tracking-tight ${scrolled ? "text-stone-900" : "text-white"}`}
           >
             School{" "}
             <span
-              className={scrolled ? "text-gradient-orange" : "text-yellow-300"}
+              className={scrolled ? "text-gradient-teal" : "text-amber-300"}
             >
               Bus
             </span>
@@ -50,7 +50,7 @@ export default function Navbar() {
               href={link.href}
               className={`text-sm font-bold px-4 py-2 rounded-full transition-all ${
                 scrolled
-                  ? "text-gray-700 hover:bg-orange-50 hover:text-orange-600"
+                  ? "text-stone-700 hover:bg-emerald-50 hover:text-emerald-700"
                   : "text-white/85 hover:bg-white/15 hover:text-white"
               }`}
             >
@@ -67,7 +67,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className={`text-sm font-bold px-4 py-2 rounded-full transition-all ${
               scrolled
-                ? "text-gray-600 hover:text-orange-500"
+                ? "text-stone-600 hover:text-emerald-600"
                 : "text-white/75 hover:text-white"
             }`}
           >
@@ -77,8 +77,8 @@ export default function Navbar() {
             href="#contact"
             className={`btn-fun text-sm font-black px-5 py-2.5 rounded-full ${
               scrolled
-                ? "bg-linear-to-r from-orange-500 to-orange-400 text-white"
-                : "bg-yellow-400 text-yellow-900"
+                ? "bg-linear-to-r from-emerald-600 to-teal-500 text-white"
+                : "bg-amber-400 text-amber-900"
             }`}
           >
             Get Started
@@ -87,7 +87,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className={`md:hidden p-2 rounded-xl ${scrolled ? "text-gray-700 bg-gray-100" : "text-white bg-white/15"}`}
+          className={`md:hidden p-2 rounded-xl ${scrolled ? "text-stone-700 bg-stone-100" : "text-white bg-white/15"}`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -109,12 +109,12 @@ export default function Navbar() {
           menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="bg-white/98 backdrop-blur-xl border-t-4 border-orange-400 px-4 py-5 flex flex-col gap-2 shadow-2xl">
+        <div className="bg-white/98 backdrop-blur-xl border-t-4 border-emerald-500 px-4 py-5 flex flex-col gap-2 shadow-2xl">
           {navLinks.map((link, i) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-gray-800 font-bold py-3 px-4 rounded-2xl hover:bg-orange-50 hover:text-orange-600 transition-all"
+              className="text-stone-800 font-bold py-3 px-4 rounded-2xl hover:bg-emerald-50 hover:text-emerald-700 transition-all"
               style={{
                 opacity: menuOpen ? 1 : 0,
                 transform: menuOpen ? "translateX(0)" : "translateX(-12px)",
@@ -127,7 +127,7 @@ export default function Navbar() {
           ))}
           <a
             href="#contact"
-            className="btn-fun bg-linear-to-r from-orange-500 to-orange-400 text-white text-center font-black px-4 py-3.5 rounded-2xl mt-2"
+            className="btn-fun bg-linear-to-r from-emerald-600 to-teal-500 text-white text-center font-black px-4 py-3.5 rounded-2xl mt-2"
             style={{
               opacity: menuOpen ? 1 : 0,
               transform: menuOpen ? "translateX(0)" : "translateX(-12px)",

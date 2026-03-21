@@ -41,19 +41,19 @@ const faqs = [
 
 function FAQItem({ q, a, open, toggle }: { q: string; a: string; open: boolean; toggle: () => void }) {
   return (
-    <div className={`border-2 rounded-2xl transition-all duration-300 ${open ? "border-blue-200 bg-blue-50/50 shadow-sm" : "border-gray-100 bg-white hover:border-gray-200"}`}>
+    <div className={`border-2 rounded-2xl transition-all duration-300 ${open ? "border-emerald-200 bg-emerald-50/50 shadow-sm" : "border-stone-100 bg-white hover:border-stone-200"}`}>
       <button
         onClick={toggle}
         className="w-full flex items-center gap-4 px-6 py-5 text-left"
         aria-expanded={open}
       >
-        <span className={`text-base font-black flex-1 transition-colors ${open ? "text-blue-700" : "text-gray-900"}`}>
+        <span className={`text-base font-black flex-1 transition-colors ${open ? "text-emerald-700" : "text-stone-900"}`}>
           {q}
         </span>
         <FlatIcon
           name="angle-small-down"
           size={20}
-          className={`shrink-0 transition-transform duration-300 ${open ? "rotate-180 text-blue-500" : "text-gray-400"}`}
+          className={`shrink-0 transition-transform duration-300 ${open ? "rotate-180 text-emerald-500" : "text-stone-400"}`}
         />
       </button>
       <div
@@ -61,7 +61,7 @@ function FAQItem({ q, a, open, toggle }: { q: string; a: string; open: boolean; 
         style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
       >
         <div className="overflow-hidden">
-          <p className="px-6 pb-5 text-gray-500 text-sm font-semibold leading-relaxed">
+          <p className="px-6 pb-5 text-stone-500 text-sm font-semibold leading-relaxed">
             {a}
           </p>
         </div>
@@ -74,20 +74,20 @@ export default function FAQ() {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-24 bg-gray-50 relative overflow-hidden">
-      <div className="absolute inset-0 bg-grid opacity-[0.04] pointer-events-none" />
+    <section id="faq" className="py-24 bg-stone-50 relative overflow-hidden">
+      <div className="absolute inset-0 bg-dots opacity-[0.03] pointer-events-none" />
 
       <div className="relative max-w-3xl mx-auto px-6 sm:px-10">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 font-black text-xs uppercase tracking-widest px-5 py-2.5 rounded-full mb-6 border border-blue-200">
+            <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 font-black text-xs uppercase tracking-widest px-5 py-2.5 rounded-full mb-6 border border-emerald-200">
               <FlatIcon name="interrogation" size={14} /> FAQ
             </div>
-            <h2 className="text-4xl sm:text-5xl font-black text-gray-900 leading-tight mb-4">
-              Got <span className="bg-yellow-400 text-gray-900 px-2 rounded-lg">questions?</span>
+            <h2 className="text-4xl sm:text-5xl font-black text-stone-900 leading-tight mb-4">
+              Got <span className="bg-amber-400 text-stone-900 px-2 rounded-lg">questions?</span>
             </h2>
-            <p className="text-gray-500 text-lg font-semibold max-w-lg mx-auto">
-              Everything you need to know about School Bus. Can't find the answer? Contact our team.
+            <p className="text-stone-500 text-lg font-semibold max-w-lg mx-auto">
+              Everything you need to know about School Bus. Can&apos;t find the answer? Contact our team.
             </p>
           </div>
         </ScrollReveal>
@@ -107,10 +107,10 @@ export default function FAQ() {
 
         <ScrollReveal delay={200}>
           <div className="mt-12 text-center">
-            <p className="text-gray-500 text-sm font-semibold mb-4">Still have questions?</p>
+            <p className="text-stone-500 text-sm font-semibold mb-4">Still have questions?</p>
             <a
               href="#contact"
-              className="btn-fun inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white font-black px-8 py-4 rounded-full text-sm"
+              className="btn-fun inline-flex items-center gap-2 bg-stone-900 hover:bg-stone-800 text-white font-black px-8 py-4 rounded-full text-sm"
             >
               Contact our team
             </a>

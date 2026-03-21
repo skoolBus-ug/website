@@ -14,12 +14,12 @@ export default function Hero() {
   return (
     <section
       className="relative overflow-hidden"
-      style={{ background: "linear-gradient(150deg, #0f172a 0%, #1e3a8a 50%, #1d4ed8 100%)" }}
+      style={{ background: "linear-gradient(150deg, #022c22 0%, #064e3b 40%, #059669 100%)" }}
     >
       {/* Background decoration */}
-      <div className="absolute top-[-10%] right-[-5%] w-175 h-175 rounded-full opacity-15 pointer-events-none blur-3xl" style={{ background: "radial-gradient(circle, #fcd34d, #f97316)" }} />
-      <div className="absolute bottom-[30%] left-[-10%] w-125 h-125 rounded-full opacity-10 pointer-events-none blur-3xl" style={{ background: "radial-gradient(circle, #818cf8, #4f46e5)" }} />
-      <div className="absolute inset-0 bg-grid opacity-[0.04] pointer-events-none" />
+      <div className="absolute top-[-10%] right-[-5%] w-175 h-175 rounded-full opacity-15 pointer-events-none blur-3xl" style={{ background: "radial-gradient(circle, #fcd34d, #f59e0b)" }} />
+      <div className="absolute bottom-[30%] left-[-10%] w-125 h-125 rounded-full opacity-10 pointer-events-none blur-3xl" style={{ background: "radial-gradient(circle, #34d399, #0d9488)" }} />
+      <div className="absolute inset-0 bg-dots-white opacity-[0.04] pointer-events-none" />
 
       {/* ── Centered text content ── */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-10 pt-24 pb-8 text-center">
@@ -27,27 +27,27 @@ export default function Hero() {
         {/* Live badge */}
         <div className="inline-flex items-center gap-2.5 bg-white/10 border border-white/20 text-white/90 text-xs font-black px-5 py-2.5 rounded-full mb-5">
           <span className="relative flex h-2 w-2 shrink-0">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-green-400" />
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-amber-400" />
           </span>
-          Uganda's #1 School Management Platform
+          Uganda&apos;s #1 School Management Platform
         </div>
 
         {/* Headline */}
         <h1 className="font-black tracking-tight mb-4" style={{ lineHeight: 1.06 }}>
           <span className="block text-4xl sm:text-5xl text-white">Run your entire</span>
-          <span className="inline-block text-4xl sm:text-5xl text-gray-900 bg-yellow-400 px-3 rounded-xl mt-2 leading-tight">
+          <span className="inline-block text-4xl sm:text-5xl text-emerald-900 bg-amber-400 px-3 rounded-xl mt-2 leading-tight">
             school from one place
           </span>
         </h1>
 
-        <p className="text-blue-100/65 text-base font-semibold leading-relaxed mb-6 max-w-2xl mx-auto">
+        <p className="text-emerald-100/60 text-base font-semibold leading-relaxed mb-6 max-w-2xl mx-auto">
           Bus tracking, academics, fees, health, dormitory, library and more — all under one roof, built for Ugandan schools.
         </p>
 
         {/* CTAs */}
         <div className="flex flex-wrap gap-3 justify-center mb-6">
-          <a href="#contact" className="btn-fun bg-yellow-400 hover:bg-yellow-300 text-yellow-900 font-black px-8 py-3.5 rounded-full text-sm inline-flex items-center gap-2">
+          <a href="#contact" className="btn-fun bg-amber-400 hover:bg-amber-300 text-amber-900 font-black px-8 py-3.5 rounded-full text-sm inline-flex items-center gap-2">
             Get Started Free <FlatIcon name="arrow-right" size={14} />
           </a>
           <a href="#modules" className="btn-fun border-2 border-white/25 text-white hover:bg-white/10 font-black px-7 py-3.5 rounded-full text-sm">
@@ -61,7 +61,7 @@ export default function Hero() {
             {stats.map((s, i) => (
               <div key={s.label} className={`flex flex-col items-center px-3 sm:px-5 ${i > 0 ? "border-l border-white/15" : ""}`}>
                 <span className="text-xl font-black text-white leading-none">{s.value}</span>
-                <span className="text-blue-200/50 text-xs font-semibold mt-0.5">{s.label}</span>
+                <span className="text-emerald-200/50 text-xs font-semibold mt-0.5">{s.label}</span>
               </div>
             ))}
           </div>
@@ -74,42 +74,42 @@ export default function Hero() {
       <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-10">
 
         {/* Floating cards — outside clip so they're never cut off */}
-        <div className="absolute -left-4 sm:-left-8 top-16 z-20 bg-white rounded-2xl px-4 py-3 shadow-2xl border border-gray-100 hidden sm:flex items-center gap-3 pop-in" style={{ animationDelay: "0.3s" }}>
-          <div className="w-9 h-9 bg-green-100 rounded-xl flex items-center justify-center shrink-0">
-            <FlatIcon name="bus" size={18} className="text-green-600" />
+        <div className="absolute -left-4 sm:-left-8 top-16 z-20 bg-white rounded-2xl px-4 py-3 shadow-2xl border border-stone-100 hidden sm:flex items-center gap-3 pop-in" style={{ animationDelay: "0.3s" }}>
+          <div className="w-9 h-9 bg-emerald-100 rounded-xl flex items-center justify-center shrink-0">
+            <FlatIcon name="bus" size={18} className="text-emerald-600" />
           </div>
           <div>
-            <p className="text-[12px] font-black text-gray-900 leading-none">3 buses live</p>
-            <p className="text-[10px] text-green-600 font-semibold mt-0.5">All on route ✓</p>
+            <p className="text-[12px] font-black text-stone-900 leading-none">3 buses live</p>
+            <p className="text-[10px] text-emerald-600 font-semibold mt-0.5">All on route ✓</p>
           </div>
         </div>
 
-        <div className="absolute -right-4 sm:-right-8 top-[18%] z-20 bg-white rounded-2xl px-4 py-3 shadow-2xl border border-gray-100 hidden sm:flex items-center gap-3 pop-in" style={{ animationDelay: "0.6s" }}>
-          <div className="w-9 h-9 bg-blue-100 rounded-xl flex items-center justify-center shrink-0">
-            <FlatIcon name="dollar" size={18} className="text-blue-600" />
+        <div className="absolute -right-4 sm:-right-8 top-[18%] z-20 bg-white rounded-2xl px-4 py-3 shadow-2xl border border-stone-100 hidden sm:flex items-center gap-3 pop-in" style={{ animationDelay: "0.6s" }}>
+          <div className="w-9 h-9 bg-teal-100 rounded-xl flex items-center justify-center shrink-0">
+            <FlatIcon name="dollar" size={18} className="text-teal-600" />
           </div>
           <div>
-            <p className="text-[12px] font-black text-gray-900 leading-none">94% fees collected</p>
-            <p className="text-[10px] text-blue-600 font-semibold mt-0.5">This term</p>
+            <p className="text-[12px] font-black text-stone-900 leading-none">94% fees collected</p>
+            <p className="text-[10px] text-teal-600 font-semibold mt-0.5">This term</p>
           </div>
         </div>
 
-        <div className="absolute -right-4 sm:-right-8 top-[52%] z-20 bg-white rounded-2xl px-4 py-3 shadow-2xl border border-gray-100 hidden sm:flex items-center gap-3 pop-in" style={{ animationDelay: "0.9s" }}>
-          <div className="w-9 h-9 bg-purple-100 rounded-xl flex items-center justify-center shrink-0">
-            <FlatIcon name="book-open-cover" size={18} className="text-purple-600" />
+        <div className="absolute -right-4 sm:-right-8 top-[52%] z-20 bg-white rounded-2xl px-4 py-3 shadow-2xl border border-stone-100 hidden sm:flex items-center gap-3 pop-in" style={{ animationDelay: "0.9s" }}>
+          <div className="w-9 h-9 bg-amber-100 rounded-xl flex items-center justify-center shrink-0">
+            <FlatIcon name="book-open-cover" size={18} className="text-amber-600" />
           </div>
           <div>
-            <p className="text-[12px] font-black text-gray-900 leading-none">312 students present</p>
-            <p className="text-[10px] text-purple-600 font-semibold mt-0.5">Today</p>
+            <p className="text-[12px] font-black text-stone-900 leading-none">312 students present</p>
+            <p className="text-[10px] text-amber-600 font-semibold mt-0.5">Today</p>
           </div>
         </div>
 
-        <div className="absolute -left-4 sm:-left-8 top-[50%] z-20 bg-white rounded-2xl px-4 py-3 shadow-2xl border border-gray-100 hidden sm:flex items-center gap-3 pop-in" style={{ animationDelay: "1.1s" }}>
+        <div className="absolute -left-4 sm:-left-8 top-[50%] z-20 bg-white rounded-2xl px-4 py-3 shadow-2xl border border-stone-100 hidden sm:flex items-center gap-3 pop-in" style={{ animationDelay: "1.1s" }}>
           <div className="w-9 h-9 bg-orange-100 rounded-xl flex items-center justify-center shrink-0">
             <FlatIcon name="user-check" size={18} className="text-orange-600" />
           </div>
           <div>
-            <p className="text-[12px] font-black text-gray-900 leading-none">98% attendance</p>
+            <p className="text-[12px] font-black text-stone-900 leading-none">98% attendance</p>
             <p className="text-[10px] text-orange-500 font-semibold mt-0.5">This week</p>
           </div>
         </div>
@@ -120,7 +120,7 @@ export default function Hero() {
           {/* Glow behind frame */}
           <div
             className="absolute -inset-4 rounded-3xl blur-3xl opacity-25 pointer-events-none"
-            style={{ background: "linear-gradient(135deg, #fcd34d 0%, #f97316 40%, #6366f1 100%)" }}
+            style={{ background: "linear-gradient(135deg, #fcd34d 0%, #059669 40%, #0d9488 100%)" }}
           />
 
           {/* Browser frame */}
@@ -132,15 +132,15 @@ export default function Hero() {
               transformOrigin: "top center",
             }}
           >
-            <div className="bg-gray-900/95 px-4 py-3 flex items-center gap-3">
+            <div className="bg-stone-900/95 px-4 py-3 flex items-center gap-3">
               <div className="flex gap-1.5 shrink-0">
                 <span className="w-3 h-3 rounded-full bg-red-500" />
                 <span className="w-3 h-3 rounded-full bg-yellow-400" />
                 <span className="w-3 h-3 rounded-full bg-green-500" />
               </div>
-              <div className="flex-1 bg-gray-800 rounded-lg px-3 py-1.5 flex items-center gap-2 max-w-sm mx-auto">
-                <span className="text-green-400 text-[11px]">●</span>
-                <span className="text-gray-400 text-[11px] font-mono">app.schoolbus.ug</span>
+              <div className="flex-1 bg-stone-800 rounded-lg px-3 py-1.5 flex items-center gap-2 max-w-sm mx-auto">
+                <span className="text-emerald-400 text-[11px]">●</span>
+                <span className="text-stone-400 text-[11px] font-mono">app.schoolbus.ug</span>
               </div>
             </div>
             <Image
@@ -156,7 +156,7 @@ export default function Hero() {
           {/* Fade out bottom of visible screenshot */}
           <div
             className="absolute bottom-0 left-0 right-0 h-28 pointer-events-none z-10"
-            style={{ background: "linear-gradient(to bottom, transparent, white)" }}
+            style={{ background: "linear-gradient(to bottom, transparent, #fafaf9)" }}
           />
         </div>
       </div>

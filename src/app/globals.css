@@ -9,6 +9,8 @@
   --pink:    #EC4899;
   --red:     #EF4444;
   --sky:     #38BDF8;
+  --teal:    #0D9488;
+  --emerald: #059669;
 }
 
 * { box-sizing: border-box; }
@@ -17,8 +19,8 @@ html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-nunito), 'Nunito', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  background: #fff;
-  color: #1e293b;
+  background: #fafaf9;
+  color: #1c1917;
 }
 
 /* ── Blob shapes ── */
@@ -114,7 +116,7 @@ body {
 /* ═══════════════════ TEXT EFFECTS ═══════════════════ */
 
 .wavy-underline {
-  text-decoration: underline wavy var(--orange) 3px;
+  text-decoration: underline wavy var(--teal) 3px;
   text-underline-offset: 8px;
 }
 
@@ -130,8 +132,14 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+.text-gradient-teal {
+  background: linear-gradient(135deg, #0d9488 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 .text-gradient-rainbow {
-  background: linear-gradient(135deg, #f97316, #ec4899, #8b5cf6, #3b82f6);
+  background: linear-gradient(135deg, #0d9488, #f59e0b, #f97316, #059669);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -176,6 +184,7 @@ body {
 .glow-yellow { box-shadow: 0 0 40px rgba(252,211,77,0.55); }
 .glow-purple { box-shadow: 0 0 40px rgba(139,92,246,0.4); }
 .glow-green  { box-shadow: 0 0 40px rgba(16,185,129,0.4); }
+.glow-teal   { box-shadow: 0 0 40px rgba(13,148,136,0.4); }
 
 /* ═══════════════════ TEXTURES ═══════════════════ */
 
